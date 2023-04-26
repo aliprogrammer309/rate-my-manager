@@ -1,0 +1,60 @@
+.image_wrapper {
+  position: relative;
+}
+
+.image_wrapper > img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 90vh;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(50, 50, 50, 0.5);
+  text-align: center;
+  /* center overlay text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay_2 {
+  inset: 0;
+}
+
+.overlay > h3 {
+  padding: 0.2rem;
+  background-color: gold;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.overlay > h4 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.overlay > input {
+  padding: 1rem;
+  border-radius: 25px;
+  border: none;
+  width: 450px;
+}
+
+@media screen and (max-width: 480px) {
+  .overlay > input {
+    padding: 1rem;
+    border-radius: 25px;
+    border: none;
+    width: 300px;
+  }
+
+  .image_wrapper > img {
+    height: 60vh;
+  }
+}
