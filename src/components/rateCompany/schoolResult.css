@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.action-btns {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 95px auto 20px auto;
+}
+.school-rating-cell {
+  width: 70%;
+  background-color: rgb(244, 244, 244);
+  display: flex;
+  padding: 20px;
+  margin: 20px;
+}
+
+.rating-cell-left {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  justify-content: flex-start;
+  /* align-items: center; */
+}
+
+.rating-cell-left > h1 {
+  margin-top: 10px;
+  background-color: yellow;
+  width: 45px;
+  height: 40px;
+  text-align: center;
+}
+
+.rating-cell-right {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 1%;
+  justify-content: space-between;
+}
+.singal-word {
+  padding: 3px;
+  background-color: yellow;
+  /* text-align: center; */
+  /* width: 50px; */
+  /* height: 40px; */
+}
+
+.right-cell-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.right-cell-results {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-cell-results-left {
+  margin-top: 10px;
+  width: 40%;
+}
+
+.result-cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.school-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.school-summary-container {
+  display: flex;
+  width: 50%;
+  background-color: rgb(255, 248, 222);
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.school-summary-half {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+.school-summary-child {
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.school-summary-child-left {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.school-summary-child-right > h3 {
+  background: yellow;
+  padding: 2px;
+}
+
+h1{
+  font-size: 1.7em;
+  margin: 1% 0 1% 0;
+}
+
+@media only screen and (min-width: 550px) and (max-width: 850px) {
+  .school-rating-cell {
+    width: 85%;
+    padding: 10px;
+  }
+
+  .school-summary-container {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .action-btns {
+    width: 80%;
+  }
+  .school-rating-cell {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .rating-cell-left {
+    width: 20%;
+  }
+  .rating-cell-right {
+    width: 80%;
+  }
+  .right-cell-results {
+    flex-direction: column;
+  }
+  .right-cell-results-left {
+    margin-top: 10px;
+    width: 90%;
+  }
+  .result-cell {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    /* gap: 100px; */
+    /* justify-content: space-between; */
+  }
+  .school-summary-container {
+    width: 80%;
+    flex-direction: column;
+  }
+  .school-summary-half {
+    width: 90%;
+  }  
+
+
+
+
+}

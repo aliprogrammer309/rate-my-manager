@@ -1,0 +1,135 @@
+.chart-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 50vh;
+  width: 80vw;
+  margin: 5%;
+}
+
+.ratings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating-card {
+  width: 70%;
+  background-color: rgb(237, 237, 237);
+  padding: 1%;
+  /* margin: 0 auto; */
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  width: 20%;
+  margin: 1%;
+}
+
+.rate {
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  margin: 1%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.spacing {
+  margin-right: 20px;
+}
+
+.side-box {
+  width: 50px;
+}
+.right-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-middle {
+  display: flex;
+}
+
+.right-header > div {
+  display: flex;
+}
+
+.rate {
+  display: flex;
+  text-align: center;
+}
+
+.rate > div > h1 {
+  background-color: yellow;
+  /* text-align: center; */
+}
+
+.right-decription > p {
+  text-align: justify;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (min-width: 610px) and (max-width: 900px) {
+  span {
+    line-height: 2;
+  }
+  .chart-container {
+    height: 30vh;
+    margin: 5%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  span {
+    line-height: 2;
+  }
+  .chart-container {
+    height: 25vh;
+    margin: 3%;
+  }
+  .cell {
+    flex-direction: column;
+  }
+  .rating-card {
+    flex-direction: column;
+    /* padding: 20px; */
+  }
+  .rating-card {
+    width: 90%;
+  }
+
+  .rate {
+    margin: 0 10px 0 10px;
+  }
+
+  .left {
+    display: flex;
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .right-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .right-middle {
+    flex-direction: column;
+  }
+}

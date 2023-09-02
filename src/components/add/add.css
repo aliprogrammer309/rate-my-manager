@@ -1,0 +1,44 @@
+.addContainer {
+  width: 50%;
+  border: 1px solid rgb(232, 232, 232);
+  margin: 80px auto 15px auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1%;
+  text-align: center;
+}
+
+.addContainer > input {
+  width: 70%;
+  padding: 0.5rem;
+  font-size: large;
+  margin: 2%;
+}
+
+@media only screen and (max-width: 500px) {
+  .addContainer {
+    width: 90%;
+  }
+
+  .addContainer > input {
+    width: 90%;
+    padding: 0.2rem;
+    font-size: medium;
+    margin: 2%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 830px) {
+    .addContainer {
+      width: 70%;
+    }
+  
+    .addContainer > input {
+      width: 90%;
+      font-size: medium;
+      margin: 3%;
+    }
+  }
+  
