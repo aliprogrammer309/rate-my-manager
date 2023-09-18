@@ -6,3 +6,5 @@ logs/
 # macOS Files
 .DS_Store
 
+# ENV file
+.env
