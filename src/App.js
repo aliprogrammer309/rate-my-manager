@@ -16,7 +16,6 @@ import CoworkerResult from "./components/rateCoworker/CoworkerResult";
 import SearchCoworker from "./components/search/SearchCoworker";
 import About from "./pages/About/About";
 import Advice from "./pages/Advice/Advice";
-import Blogs from "./pages/Blogs/Blogs";
 import CommunityGuidelines from "./pages/CommunityGuidelines/CommunityGuidlines";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import Jobs from "./pages/Jobs/Jobs";
@@ -29,7 +28,9 @@ import SignUp from "./pages/Auth/SignUp";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import ForgetPassword from "./pages/Auth/ForgetPassword";
-
+import Blogs from "./pages/Blog/Blogs";
+import BlogForm from "./pages/Blog/BlogForm";
+import SingleBlogPage from "./pages/Blog/SingleBlogPage";
 
 function App() {
   return (
@@ -108,6 +109,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/forgetPassword" element={<ForgetPassword />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:id" element={<SingleBlogPage />} />
+          <Route path="/blogs/new" element={<BlogForm />} />
           <Route
             path="/managerPersonReview"
             element={<ProfessorPersonReview />}

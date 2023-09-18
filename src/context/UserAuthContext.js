@@ -8,6 +8,7 @@ import {
   signInWithPopup,
   FacebookAuthProvider,
   TwitterAuthProvider,
+  OAuthProvider,
 } from "firebase/auth";
 import { auth } from "../firebase";
 
@@ -36,7 +37,25 @@ export function UserAuthContextProvider({ children }) {
   const twitterSignIn = () => {
     const twitterAuthProvider = new TwitterAuthProvider();
     return signInWithPopup(auth, twitterAuthProvider);
-  }
+  };
+  const MicrosoftSignIn = async () => {
+    const provider = new OAuthProvider("microsoft.com");
+    provider.setCustomParameters({
+      prompt: "consent",
+      tenant: "546567d4-ed37-4f2c-9363-73a006bba787",
+    })
+
+    try {
+      return signInWithPopup(auth, provider);
+      // const result = await signInWithPopup(auth, provider);
+      // The signed-in user info.
+      // const user = result.user;
+      // return user;
+    } catch (error) {
+      // Handle Errors here.
+      console.error("Error during Microsoft sign in", error);
+    }
+  };
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
       console.log("Auth", currentuser);
@@ -50,7 +69,16 @@ export function UserAuthContextProvider({ children }) {
 
   return (
     <userAuthContext.Provider
-      value={{ user, logIn, signUp, logOut, googleSignIn, facebookSignIn, twitterSignIn }}
+      value={{
+        user,
+        logIn,
+        signUp,
+        logOut,
+        googleSignIn,
+        facebookSignIn,
+        twitterSignIn,
+        MicrosoftSignIn
+      }}
     >
       {children}
     </userAuthContext.Provider>
