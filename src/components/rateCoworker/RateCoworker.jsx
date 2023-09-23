@@ -11,8 +11,10 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../firebase";
 import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
+import { useUserAuth } from "../../context/UserAuthContext";
 
 const RateCoworker = () => {
+  const { user } = useUserAuth();
   const [company, setCompany] = useState("");
   const [dependable, setDependable] = useState(0);
   const [trustworthiness, setTrustworthiness] = useState(0);
@@ -51,6 +53,7 @@ const RateCoworker = () => {
         withOthers: withOthers,
         review: review,
         id: id,
+        author_id: user.uid,
         timestamp: serverTimestamp(),
       });
       console.log("Document written with ID: ", docRef.id);

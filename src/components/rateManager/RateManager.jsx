@@ -14,8 +14,10 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../firebase";
 import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
+import { useUserAuth } from "../../context/UserAuthContext";
 
 const RateManager = () => {
+  const { user } = useUserAuth();
   const [company, setCompany] = useState("");
   const [rating, setRating] = useState(0);
   const [difficulty, setDifficulty] = useState(0);
@@ -69,6 +71,7 @@ const RateManager = () => {
         grade: grade,
         review: review,
         id: id,
+        author_id: user.uid,
         timestamp: serverTimestamp(),
       });
       console.log("Document written with ID: ", docRef.id);

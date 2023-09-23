@@ -9,8 +9,10 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../firebase";
 import Navbar from "../navbar/Navbar";
+import { useUserAuth } from "../../context/UserAuthContext";
 
 const RateCompany = () => {
+  const { user } = useUserAuth();
   const [reputation, setReputation] = useState(0);
   const [location, setLocation] = useState(0);
   const [opportunities, setOpportunities] = useState(0);
@@ -44,6 +46,7 @@ const RateCompany = () => {
         safety: safety,
         review: review,
         id: id,
+        author_id: user.uid,
         timestamp: serverTimestamp(),
       });
       console.log("Document written with ID: ", docRef.id);
