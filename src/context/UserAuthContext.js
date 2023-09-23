@@ -43,7 +43,7 @@ export function UserAuthContextProvider({ children }) {
     provider.setCustomParameters({
       prompt: "consent",
       tenant: "546567d4-ed37-4f2c-9363-73a006bba787",
-    })
+    });
 
     try {
       return signInWithPopup(auth, provider);
@@ -77,7 +77,7 @@ export function UserAuthContextProvider({ children }) {
         googleSignIn,
         facebookSignIn,
         twitterSignIn,
-        MicrosoftSignIn
+        MicrosoftSignIn,
       }}
     >
       {children}

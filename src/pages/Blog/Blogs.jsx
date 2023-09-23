@@ -13,6 +13,7 @@ import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
 import { db } from "../../firebase";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
+import { useUserAuth } from "../../context/UserAuthContext";
 
 function htmlToPlainText(htmlString) {
   const parser = new DOMParser();
@@ -31,6 +32,7 @@ const fetchBlogs = async () => {
 };
 
 function Blogs() {
+  const { user } = useUserAuth();
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
@@ -62,8 +64,16 @@ function Blogs() {
   return (
     <>
       <Navbar showLinks={true} />
+
       <div style={{ padding: "20px", marginTop: "90px" }}>
-        <Grid container spacing={4}>
+        {user?.uid === "bl49RoDkz5QrrPmAxsEdhNYYKYH2" && (
+          <Link style={{ textDecoration: "none" }} to="/blogs/new">
+            <Button variant="contained" color="primary">
+              <b> Add New Blog </b>
+            </Button>
+          </Link>
+        )}
+        <Grid container spacing={4} style={{ marginTop: "10px" }}>
           {blogs.map((blog) => {
             const plainDescription = htmlToPlainText(blog.description);
             const shortenedDescription = `${plainDescription
@@ -107,15 +117,17 @@ function Blogs() {
                     </CardActionArea>
                   </Card>
                 </Link>
-                <CardActions>
-                  <Button
-                    size="small"
-                    color="secondary"
-                    onClick={() => handleDelete(blog.id)}
-                  >
-                    Delete
-                  </Button>
-                </CardActions>
+                {user?.uid === "bl49RoDkz5QrrPmAxsEdhNYYKYH2" && (
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="error"
+                      onClick={() => handleDelete(blog.id)}
+                    >
+                      Delete Blog
+                    </Button>
+                  </CardActions>
+                )}
               </Grid>
             );
           })}
