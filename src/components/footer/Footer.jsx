@@ -8,18 +8,22 @@ const Footer = () => {
   return (
     <footer>
       <div className="logo">
-        <h4>&#169; {year} RateMyO, Inc. <br /> All Rights Reserved</h4>
+        <h4>
+          &#169; {year} RateMyO, Inc. <br /> All Rights Reserved
+        </h4>
       </div>
       <div className="footer-pages-container">
         <div className="footer-pages-links">
           <Link to="about">About Us</Link>
           <Link to="contactUs">Contact Us</Link>
           <Link to="privacyPolicy">Privacy Policy</Link>
+          <Link to="termOfUse">Term Of Use</Link>
         </div>
         <div className="footer-pages-links">
-          <Link to="copyright">Copyright Policy</Link>
+          {/* <Link to="copyright">Copyright Policy</Link> */}
           <Link to="advice">Advice</Link>
           <Link to="communityGuidelines">Community Guidlines</Link>
+          <Link to="cookiePolicy">Cookie Policy</Link>
         </div>
       </div>
 

@@ -29,8 +29,10 @@ const About = () => {
         </p>
         <p style={{ backgroundColor: "yellow" }}>
           <em>
-            This platform is an upgrade to all current job rating platforms. All
-            reviews listed on our platform are transmitted anonymously.
+            <b>
+              This platform is an upgrade to all current job rating platforms.
+              All reviews listed on our platform are transmitted anonymously.
+            </b>
           </em>
         </p>
         <br />

@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import { Link } from "react-router-dom";
 
 const style = {
   position: "absolute",
@@ -37,10 +38,13 @@ export default function CookieModal() {
             Cookie Policy
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis
-            ut velit at id quam, quod excepturi assumenda aperiam sequi
-            voluptates? Esse cumque tempora porro repellendus similique eius
-            sequi odit ipsam!
+            We use two types of cookies on our services: “session cookies” and
+            “persistent cookies.” Session cookies are temporary cookies that
+            remain on your device until you leave the services. A persistent
+            cookie remains on your device for much longer or until you manually
+            delete it (how long the cookie remains will depend on the duration
+            or “lifetime” of the specific cookie and your browser settings).
+            <Link to="/cookiePolicy">View all Cookie Policies</Link>
           </Typography>
         </Box>
       </Modal>

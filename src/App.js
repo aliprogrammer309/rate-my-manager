@@ -35,6 +35,8 @@ import Blogs from "./pages/Blog/Blogs";
 import BlogForm from "./pages/Blog/BlogForm";
 import SingleBlogPage from "./pages/Blog/SingleBlogPage";
 import AdminProtection from "./components/AdminProtection";
+import CookiePolicy from "./pages/CookiePolicy/CookiePolicy";
+import TermOfUse from "./pages/TermOfUse/TermOfUse";
 
 function App() {
   return (
@@ -108,6 +110,8 @@ function App() {
           <Route path="/resumeHelp" element={<ResumeHelp />} />
           <Route path="/topManagers" element={<TopManagers />} />
           <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+          <Route path="/cookiePolicy" element={<CookiePolicy />} />
+          <Route path="/termOfUse" element={<TermOfUse />} />
           <Route path="/copyright" element={<Copyright />} />
           <Route path="/login" element={<Login />} />
           {/* <Route path="/signup" element={<SignUp />} /> */}

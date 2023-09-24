@@ -21,7 +21,7 @@ export default function ManagerCard({ id, name, company, department }) {
   };
 
   return (
-    <Card sx={{ minWidth: 275 }}>
+    <Card sx={{ minWidth: 275 , marginTop: "25px"}}>
       <CardContent>
         <Typography sx={{ fontSize: 24 }} gutterBottom>
           {name}

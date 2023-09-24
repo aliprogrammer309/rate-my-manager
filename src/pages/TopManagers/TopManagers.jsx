@@ -49,7 +49,7 @@ const TopManagers = () => {
     };
     fetchData();
   }, []);
-  console.log(data1);
+  // console.log(data1);
 
   return (
     <>
