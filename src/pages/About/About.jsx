@@ -32,8 +32,38 @@ const About = () => {
             This platform is an upgrade to all current job rating platforms. All
             reviews listed on our platform are transmitted anonymously.
           </em>
-          <br />
         </p>
+        <br />
+        <h2 style={{ textAlign: "center" }}>What We Do</h2>
+        <p>
+          We provide a global platform for employees and individuals to write
+          reviews about their manager, Co-worker,and company they have dealt
+          with.
+        </p>
+        <br />
+        <h2 style={{ textAlign: "center" }}>Our Values</h2>
+        <p>
+          <b>Transparency: </b>We believe in honest and fair expression of
+          opinion without fear or bias.
+        </p>
+        <p>
+          <b>Empowerment: </b>We empower workers to share their own voices and
+          experiences to improve the overall work culture.
+        </p>
+        <p>
+          <b>Safety: </b>We prioritize the safety and well-being of employees in
+          the workplace by providing a safe space to voice their opinions.
+        </p>
+        <p>
+          <b>Innovation: </b>We constantly strive for innovation in order to
+          upgrade the current job rating platform and deliver the best
+          experience for our users.
+        </p>
+        <p>
+          <b>Integrity: </b>We operate with integrity, our proprietary security
+          features ensure that all reviews on our platform are transmitted
+          anonymously, without the risk of retribution.
+        </p>{" "}
       </div>
     </>
   );
