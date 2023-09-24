@@ -1,0 +1,12 @@
+.about-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 90px;
+  padding: 1%;
+  border: 1px solid lightblue;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
